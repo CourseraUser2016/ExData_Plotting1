@@ -1,5 +1,5 @@
 ##SET YOUR OWN WORKING DIRECTORY WITH THE DATAFILE IN THERE 
-rawdata<-read.table(householdFile, header = TRUE, sep = ";", na.strings = "?")
+rawdata<-read.table("household_power_consumption.txt", header = TRUE, sep = ";", na.strings = "?")
 dates<-strptime(rawdata$Date, "%d/%m/%Y")
 
 subsetted_data<-rawdata[dates %in%strptime(c("01/02/2007","02/02/2007"),"%d/%m/%Y") ,]
